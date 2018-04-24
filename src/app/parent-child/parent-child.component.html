@@ -1,0 +1,8 @@
+<div>
+  <p>
+    parent-child works!
+  </p>
+  <button (click)="child.fun1()">call child method</button>
+  <button (click)="func()">call child method by @viewChild</button>
+  <app-child [data]="dataToChild" (event)="click($event)" #child></app-child>
+</div>

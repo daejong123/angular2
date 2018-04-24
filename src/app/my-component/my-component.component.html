@@ -1,4 +1,5 @@
 <div>
+  <p>login works!</p>
   <form #formRef="ngForm" (ngSubmit)="submitme(formRef.value)">
     <input name="username" type="text" [(ngModel)]="username" #usernameRef="ngModel" required minlength="3" placeholder="username"> {{username}} {{usernameRef.errors | json}}
     <span *ngIf="usernameRef.errors?.required">用户名不能为空</span>

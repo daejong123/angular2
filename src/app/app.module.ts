@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AuthService } from './my-component/core/auth.service';
 import { routing } from './app.routes';
+import { ParentChildComponent } from './parent-child/parent-child.component';
+import { ChildComponent } from './parent-child/child/child.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { routing } from './app.routes';
     AppComponent,
     MyComponentComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ParentChildComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
