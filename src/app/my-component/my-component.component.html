@@ -1,0 +1,14 @@
+<div>
+  <form #formRef="ngForm" (ngSubmit)="submitme(formRef.value)">
+    <input name="username" type="text" [(ngModel)]="username" #usernameRef="ngModel" required minlength="3" placeholder="username"> {{username}} {{usernameRef.errors | json}}
+    <span *ngIf="usernameRef.errors?.required">用户名不能为空</span>
+    <span *ngIf="usernameRef.errors?.minlength">用户名不能少于3个字符</span>
+    <br>
+    <input name="password" type="password" [(ngModel)]="password" #passwordRef="ngModel" minlength="6" placeholder="passwrod"> {{password}} {{passwordRef.valid}}
+    <span *ngIf="passwordRef.errors?.minlength">密码不能少于6位</span>
+    <br>
+    <button (click)="clickme(usernameRef.value, passwordRef.value)">登录</button>
+    <button type="submit">提交</button>
+    <button (click)="clicktest()">clickme</button>
+  </form>
+</div>
